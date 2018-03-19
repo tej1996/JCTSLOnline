@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.jctsl.jctslonline.ConductorDept.ConductorDashboard">
+
+    <TextView
+        android:id="@+id/textView_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="You are on route Durgapura to WTP" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner_livebusstation"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_route"
+        android:layout_marginTop="17dp" />
+
+    <Button
+        android:id="@+id/btn_arrived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arrived"
+        android:layout_marginEnd="40dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinner_livebusstation"
+        android:layout_marginTop="18dp"
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textView_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Destination" />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinner_destination"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText android:id="@+id/nooftickets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="No. of tickets" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:id="@+id/checkBox_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Student" />
+
+            <CheckBox
+                android:id="@+id/checkBox_seniorcitizen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Senior Citizen" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_buyticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy Ticket"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btn_logoutconductor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+
+        <TextView
+            android:id="@+id/textView_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

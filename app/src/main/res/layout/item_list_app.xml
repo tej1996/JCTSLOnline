@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp" >
+
+
+    <TextView
+        android:id="@+id/textView_busname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Bus :"
+        android:textColor="@android:color/black"
+        />
+
+    <TextView
+        android:id="@+id/textView_printbusname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="136dp"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView_srcstation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/textView_busname"
+        android:text="SRC :" />
+
+    <TextView
+        android:id="@+id/textView_printsrcstation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView_printbusname"
+        android:layout_alignStart="@+id/textView_printbusname"
+
+        android:layout_below="@+id/textView_printbusname"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+
+</RelativeLayout>

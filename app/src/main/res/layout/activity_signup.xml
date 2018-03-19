@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jctsl.jctslonline.Signup"
+    android:background="@color/colorPrimary">
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/emailicon"
+        app:mtf_labelColor="#FAFAFA"
+        app:mtf_cardCollapsedHeight="2dp"
+        app:mtf_openKeyboardOnFocus="true"
+        android:id="@+id/materialTextField"
+        android:layout_above="@+id/materialTextField6"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/get_passenger_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/emailicon"
+        app:mtf_labelColor="#FAFAFA"
+        app:mtf_cardCollapsedHeight="2dp"
+        app:mtf_openKeyboardOnFocus="true"
+        android:id="@+id/materialTextField6"
+        android:layout_above="@+id/materialTextField5"
+        android:layout_alignStart="@+id/materialTextField5">
+
+        <EditText
+            android:id="@+id/get_passenger_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Id"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/emailicon"
+        app:mtf_labelColor="#FAFAFA"
+        app:mtf_cardCollapsedHeight="2dp"
+        app:mtf_openKeyboardOnFocus="true"
+        android:id="@+id/materialTextField5"
+        android:layout_marginBottom="14dp"
+        android:layout_above="@+id/materialTextField4"
+        android:layout_alignStart="@+id/materialTextField4">
+
+        <EditText
+            android:id="@+id/get_passenger_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/emailicon"
+        app:mtf_labelColor="#FAFAFA"
+        app:mtf_cardCollapsedHeight="2dp"
+        app:mtf_openKeyboardOnFocus="true"
+        android:layout_marginBottom="34dp"
+        android:id="@+id/materialTextField4"
+        android:layout_above="@+id/btn_signup"
+        android:layout_alignStart="@+id/materialTextField">
+
+        <EditText
+            android:id="@+id/get_passenger_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/btn_signup"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        custom:pb_colorComplete="@color/green_complete"
+        custom:pb_colorNormal="@android:color/white"
+        custom:pb_colorPressed="@color/colorPrimary"
+        custom:pb_colorProgress="#FFF"
+        custom:pb_textComplete="Success"
+        custom:pb_textProgress="Loading"
+        custom:pb_textError="Error"
+        custom:pb_colorError="@color/red_error"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp" />
+
+</RelativeLayout>

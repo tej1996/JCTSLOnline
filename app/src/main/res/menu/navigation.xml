@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_login"
+        android:icon="@drawable/emailicon"
+        android:title="@string/title_login"
+        />
+
+    <item
+        android:id="@+id/navigation_signup"
+        android:icon="@drawable/passwordicon"
+        android:title="@string/title_signup" />
+
+    <item
+        android:id="@+id/navigation_conlogin"
+        android:icon="@drawable/passwordicon"
+        android:title="@string/title_conlogin" />
+
+</menu>

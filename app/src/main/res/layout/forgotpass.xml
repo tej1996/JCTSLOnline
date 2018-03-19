@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView android:id="@+id/forgot_pass"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="24dp"
+        android:text="Enter Your Email Address"
+        android:gravity="center"
+        android:textSize="16dip"/>
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText android:id="@+id/customer_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_alignParentBottom="true"
+            android:hint="Email" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="Send OTP"
+        android:id="@+id/sendotp"
+        android:layout_gravity="center_horizontal" />
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText android:id="@+id/otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_alignParentBottom="true"
+            android:hint="OTP" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText android:id="@+id/newpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_alignParentBottom="true"
+            android:hint="New Password" />
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>
