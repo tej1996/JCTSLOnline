@@ -56,7 +56,9 @@
         <service
             android:name=".ConductorDept.CurrentStationService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".UserProfile"></activity>
     </application>
 
 </manifest>

@@ -113,7 +113,7 @@ public class ConductorDashboard extends AppCompatActivity implements ConductorFu
         LocationManager lm = (LocationManager) getSystemService(LOCATION_SERVICE);
         if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             Toast.makeText(this, "Please enable location services", Toast.LENGTH_SHORT).show();
-            finish();
+            //finish();
         }
 
         // Check location permission is granted - if it is, start

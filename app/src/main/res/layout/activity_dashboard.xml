@@ -24,6 +24,13 @@ tools:context="com.jctsl.jctslonline.Dashboard">
 
             android:hint="Enter Destination" />
 
+        <CheckBox
+            android:id="@+id/chkBox_tourist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tourist" />
+
         <Button
             android:id="@+id/btnCheckBuses"
             android:layout_width="wrap_content"

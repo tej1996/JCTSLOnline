@@ -26,6 +26,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -101,13 +102,14 @@ public class Dashboard extends AppCompatActivity implements OnMapReadyCallback {
     String busname,busnumber,cusername,srcstation,deststation,totalfare,crowd;
     MaterialDialog dialog;
     View view;
+    CheckBox tourist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         btncheckbus = (Button) findViewById(R.id.btnCheckBuses);
         editText_destination = (EditText) findViewById(R.id.editText_destination);
-
+        tourist = (CheckBox) findViewById(R.id.chkBox_tourist);
 
         pref = getApplicationContext().getSharedPreferences("LoginPref", 0);
         editor = pref.edit();
@@ -154,8 +156,9 @@ public class Dashboard extends AppCompatActivity implements OnMapReadyCallback {
                                 Intent i = new Intent(Dashboard.this, TicketHistory.class);
                                 startActivity(i);
 
-                            } else if (1 == 2) {
-
+                            } else if (index == 0) {
+                                Intent i = new Intent(Dashboard.this,UserProfile.class);
+                                startActivity(i);
 
                             } else if (1 == 2) {
 
@@ -193,7 +196,12 @@ public class Dashboard extends AppCompatActivity implements OnMapReadyCallback {
                 String lon= Double.toString(userlongitude);
                 qty="2";
                 CheckForBus chkbus = new CheckForBus(Dashboard.this);
-                chkbus.execute(lat,lon,qty,destination);
+                if(tourist.isChecked()){
+
+                    chkbus.execute(lat,lon,qty,destination,"t");
+                }else {
+                    chkbus.execute(lat, lon, qty, destination,"nt");
+                }
             }
         });
 
@@ -391,6 +399,7 @@ public class Dashboard extends AppCompatActivity implements OnMapReadyCallback {
                     .add("lon",params[1])
                     .add("qty",params[2])
                     .add("destination",params[3])
+                    .add("tourist",params[4])
                     .build();
 
             Request request = new Request.Builder()
